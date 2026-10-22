@@ -192,9 +192,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Cong Sy Nguyen - ncsyvn@gmail.com
+original author : Cong Sy Nguyen - ncsyvn@gmail.com
 
-Other projects: [https://github.com/ncsyvn?tab=repositories](https://github.com/ncsyvn?tab=repositories)
+Author who worked on deploying the microservices on Azure : Ngouleu Tertullien - ngouleutert@gmail.com
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
