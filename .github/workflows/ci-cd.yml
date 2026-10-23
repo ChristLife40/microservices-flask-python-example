@@ -30,7 +30,7 @@ jobs:
         push: true
         tags: |
           ${{ secrets.DOCKERHUB_USERNAME }}/auth-service:${{ github.sha }}
-          ${{ secrets.DOCKERHUB_USERNAME }}/auth-service:latest
+          ${{ secrets.DOCKERHUB_USERNAME }}/auth-service:v1
 
     - name: Build and push video-service
       uses: docker/build-push-action@v5
@@ -39,4 +39,4 @@ jobs:
         push: true
         tags: |
           ${{ secrets.DOCKERHUB_USERNAME }}/video-service:${{ github.sha }}
-          ${{ secrets.DOCKERHUB_USERNAME }}/video-service:latest
+          ${{ secrets.DOCKERHUB_USERNAME }}/video-service:v11
