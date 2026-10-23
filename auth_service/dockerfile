@@ -1,0 +1,27 @@
+
+# Stage 1: Build the image
+FROM python:3.11-slim AS base
+
+# Set working directory inside the container
+WORKDIR /app
+
+# Copy only requirements first (Docker caches layers — this step skips if requirements unchanged)
+COPY requirements.txt .
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+      gcc default-libmysqlclient-dev pkg-config \
+ && rm -rf /var/lib/apt/lists/*
+
+RUN pip install --no-cache-dir --upgrade pip setuptools wheel
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the rest of the code
+COPY . .
+
+ENV FLASK_APP=auth_app/app.py
+# Expose the port (documentation + IDE hints; containers still need -p mapping)
+EXPOSE 5012
+
+# Run the app (single process per container = 12-factor rule)
+CMD ["flask", "run", "--host=0.0.0.0", "--port=5012"]

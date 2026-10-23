@@ -1,6 +1,6 @@
 # coding: utf-8
 import uuid
-from flask_jwt_extended import decode_token, get_jwt_identity, get_raw_jwt
+from flask_jwt_extended import decode_token, get_jwt_identity
 from sqlalchemy.dialects.mysql import INTEGER
 from auth_app.extensions import db
 from auth_app.utils import get_timestamp_now
