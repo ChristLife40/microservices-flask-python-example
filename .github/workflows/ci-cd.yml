@@ -39,4 +39,4 @@ jobs:
         push: true
         tags: |
           ${{ secrets.DOCKERHUB_USERNAME }}/video-service:${{ github.sha }}
-          ${{ secrets.DOCKERHUB_USERNAME }}/video-service:v11
+          ${{ secrets.DOCKERHUB_USERNAME }}/video-service:v1
