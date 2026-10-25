@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+data:
+  auth-db-host: "mysql-auth-service"
+  auth-db-name: "auth_service"
+  db-port: "3306"
+  video-db-host: "mysql-video-service"
+  video-db-name: "video_service"
+  auth-service-url: "http://auth-service-svc:5012"
